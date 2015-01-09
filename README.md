@@ -1,5 +1,7 @@
 # EmaySoap
 
+![ci](https://travis-ci.org/lenage/emay_soap.svg)
+
 Made easy to use Emay(http://www.emay.cn/) to send sms in Ruby.
 
 ## Installation
@@ -36,7 +38,7 @@ or
 
 ```ruby
 # Provide authentication credentials
-client = EmaySoap::Client.new(cdkey: 'yourcdkey, key: 'yoursessionkey', password: 'yourpassword')
+client = EmaySoap::Client.new(cdkey: 'yourcdkey', key: 'yoursessionkey', password: 'yourpassword')
 ```
 
 #### Play with API
