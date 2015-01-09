@@ -52,7 +52,7 @@ client.operations
 client.get_balance
 
 # Query each fee of SMS
-client.get_balance
+client.get_each_fee
 
 # Send SMS
 client.send_sms
