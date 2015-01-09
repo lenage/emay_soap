@@ -50,6 +50,7 @@ module EmaySoap
     def send_sms(mobiles, content, options = {})
       send_at = format_sent_at(options[:send_at]) unless options[:send_at].blank?
       mobiles = mobiles.is_a?(String) ? [mobiles] : mobiles
+      content = "#{prefix} #{content}" unless prefix.nil?
       msg = { arg2: send_at, arg3: mobiles, arg4: content, arg5: options[:kind], arg6: nil, arg7: options[:priority], arg8: options[:id] }
       call(:send_sms, msg)
     end
