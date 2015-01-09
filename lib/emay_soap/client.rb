@@ -80,7 +80,8 @@ module EmaySoap
 
     def call(action, message)
       msg = { arg0: @cdkey, arg1: @key }.merge message
-      savon.call(action, message: msg).body
+      result = savon.call(action, message: msg)
+      result.body if result.success?
     end
 
     def format_sent_at send_at
